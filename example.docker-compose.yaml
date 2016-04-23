@@ -1,0 +1,11 @@
+version: '2'
+services:
+  link:
+    image: ctroncoso/alipine-autossh
+    restart: always
+    command: someuser@vpn.myserver.com -L 0.0.0.0:8080:localhost:8080
+
+networks:
+  default:
+    external: 
+      name: mylink

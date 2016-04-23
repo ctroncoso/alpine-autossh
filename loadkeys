@@ -1,0 +1,4 @@
+# for n in ~/.ssh/id_rsa*; do
+# 	docker cp $n $(docker-compose ps -q link):/payload
+# done
+docker cp ~/.ssh/id_rsa $(docker-compose ps -q link):/payload
