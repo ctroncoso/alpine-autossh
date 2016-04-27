@@ -45,8 +45,13 @@ version: '2'
 services:
   link:
     image: ctroncoso/alipine-autossh
+    container_name: link
     restart: always
     command: someuser@vpn.myserver.com -L 0.0.0.0:8080:localhost:8080
+    environment:
+      - "AUTOSSH_PORT=0"
+    expose:
+      - "8080"
 
 networks:
   default:
