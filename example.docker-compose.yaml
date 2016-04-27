@@ -8,7 +8,7 @@ services:
     environment:
       - "AUTOSSH_PORT=0"
     expose:
-      - "1521"
+      - "8080"
 
 networks:
   default:
