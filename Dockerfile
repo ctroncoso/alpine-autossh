@@ -1,8 +1,8 @@
-FROM alpine:3.3
+FROM alpine:3.6
 MAINTAINER "Carlos Troncoso Phillips"
 
-RUN    echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories \
-	&& apk add --update autossh@testing \
+RUN    echo "@community http://dl-4.alpinelinux.org/alpine/v3.6/community/" >> /etc/apk/repositories \
+	&& apk add --update autossh@community \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV \
